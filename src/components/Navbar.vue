@@ -39,6 +39,7 @@ export default {
         .then(({ isConfirmed }) => {
           if (isConfirmed) {
             localStorage.removeItem('access_token')
+            localStorage.removeItem('admin')
             this.$router.push('/login')
             Toast.fire({
               icon: 'success',

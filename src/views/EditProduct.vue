@@ -51,6 +51,8 @@
 
 <script>
 import Swal from 'sweetalert2'
+import Toast from '../toast/toast'
+
 export default {
   name: 'Edit',
   data () {
@@ -79,11 +81,11 @@ export default {
       if (payload.data.price >= 0 && payload.data.stock >= 0) {
         this.$store.dispatch('editProduct', payload)
           .then(_ => {
-            Swal.fire({
-              title: 'Success',
+            this.$router.push('/products')
+            Toast.fire({
+              title: 'Success edit product',
               icon: 'success'
             })
-            this.$router.push('/products')
 
             this.product.name = ''
             this.product.image_url = ''

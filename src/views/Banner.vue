@@ -5,16 +5,22 @@
       <div class="container-fluid">
         <div class="card card-info">
           <div class="card-header">
-            <h3 class="card-title">Add Category</h3>
+            <h3 class="card-title">Add Banners</h3>
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form class="form-horizontal">
+          <form class="form-horizontal" @submit.prevent="addBanner">
             <div class="card-body">
               <div class="form-group row">
-                <label for="category" class="col-sm-2 col-form-label">Name</label>
+                <label for="banner" class="col-sm-2 col-form-label">Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="category" placeholder="Category">
+                  <input type="text" class="form-control" id="banner" placeholder="e.g: Banner 17th August">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="url" class="col-sm-2 col-form-label">Image URL</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="url" placeholder="e.g: https://images.google.com/image.png">
                 </div>
               </div>
             </div>
@@ -29,7 +35,7 @@
       <div class="card">
         <!-- /.card-header -->
         <div class="card-body">
-          <h3>List Categories</h3>
+          <h3>List Banners</h3>
           <div id="jsGrid1" class="jsgrid" style="position: relative; height: 100%; width: 100%;">
             <div class="jsgrid-grid-header jsgrid-header-scrollbar">
               <table class="jsgrid-table">

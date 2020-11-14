@@ -11,6 +11,8 @@
 
 <script>
 import Swal from 'sweetalert2'
+import Toast from '../toast/toast.js'
+
 export default {
   name: 'ProductCard',
   props: ['product', 'i'],
@@ -36,6 +38,10 @@ export default {
           if (data) {
             if (data.status === 200) {
               this.$store.dispatch('fetchProducts')
+              Toast.fire({
+                title: 'Success delete product',
+                icon: 'success'
+              })
             }
           }
         })
