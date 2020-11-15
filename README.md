@@ -1,5 +1,8 @@
 # e-commerce-cms-client
 
+**Demo** https://e-commerce-cms-client-akbar.web.app/
+> Deployed on Nov 14 2020
+
 ## Project setup
 ```
 npm install
